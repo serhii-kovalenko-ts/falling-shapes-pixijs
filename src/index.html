@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="<%= require('./css/styles.css') %>" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body> 
+    <div class='game'>
+        <div class='game__header'>
+            <div class='game__shapes-description radius'>Current Number of Shapes:</div>
+            <input class='game__header-shapes score radius' id='numberOfShapes' readonly >
+            <div class='game__gravity-description radius'>Covered Area (px^2):</div>
+            <input class='game__header-area score radius' id='coveredArea' readonly>
+        </div>
+
+        <div id='app'></div>
+        <div class='game__footer'>
+            <button class='game__shapes-decr button button--left' type='button' id='decreaseShapes'>-</button>
+            <button class='game__shapes-incr button button--right' type='button' id='increaseShapes'>+</button>
+            <div class='game__shapes-description radius'>Shapes Per Second:</div>
+            <input class='game__shapes-value description radius' id='shapesValue' readonly>
+            
+            <button class='game__gravity-decr button button--left' type='button' id='decreaseGravity'>-</button>
+            <button class='game__gravity-incr button button--right' type='button' id='increaseGravity'>+</button>
+            <div class='game__gravity-description radius'>Gravity Value:</div>
+            <input class='game__gravity-value description radius' id='gravityValue' readonly>
+        </div>
+    </div>
+  </body>
+</html>

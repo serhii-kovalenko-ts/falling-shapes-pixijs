@@ -1,0 +1,129 @@
+#app {
+  width: 100%;
+}
+
+#app canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  touch-action: manipulation;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+input {
+  width: 100%;
+  max-width: 100px;
+  font-size: 28px;
+}
+
+.game {
+  box-sizing: border-box;
+  width: min(100%, 1000px);
+  padding: 12px;
+}
+
+.game__header,
+.game__footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.game__header {
+  margin-bottom: 8px;
+}
+
+.game__footer {
+  margin-top: 8px;
+}
+
+.game__header input,
+.game__footer input {
+  box-sizing: border-box;
+  width: 95px;
+  font-size: 18px;
+}
+
+.game__shapes-description,
+.game__gravity-description {
+  padding: 5px;
+  line-height: 30px;
+}
+
+.score {
+  width: 100%;
+  max-width: 150px;
+  margin: 0 5px 10px 0;
+  padding: 5px;
+  border: 3px solid #000;
+}
+
+.button {
+  width: 100%;
+  min-width: 42px;
+  max-width: 50px;
+  min-height: 42px;
+  border: 3px solid #000;
+  background-color: #fff;
+  color: #1e90ff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.button--left {
+  border-radius: 16px 0 0 16px;
+}
+
+.button--right {
+  margin-right: 5px;
+  border-radius: 0 16px 16px 0;
+}
+
+.description {
+  padding: 5px;
+  border: 3px solid #000;
+  line-height: 30px;
+}
+
+.radius {
+  margin-right: 5px;
+  border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  .game {
+    padding: 8px;
+  }
+
+  .game__header,
+  .game__footer {
+    justify-content: flex-start;
+    font-size: 13px;
+  }
+
+  .game__header input,
+  .game__footer input {
+    width: 75px;
+  }
+}
